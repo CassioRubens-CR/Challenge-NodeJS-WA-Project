@@ -13,15 +13,25 @@ module.exports = {
   },
 
   async getByExams(req, res) {
-    const exams = await ExamsService.getByExams();
-
-    return res.json(exams);
+    // const exams = await ExamsService.getByExams();
+    try {
+      const exams = await ExamsService.getByExams();
+      return res.status(201).json(exams);
+    } catch (e) {
+      return res.status(400).json({ error: e.message });
+    }
+    // return res.json(exams);
   },
 
   async getExamsActive(req, res) {
-    const examsActive = await ExamsService.getExamsActive({ where: { status: true } });
-
-    return res.json(examsActive);
+    // const examsActive = await ExamsService.getExamsActive({ where: { status: true } });
+    try {
+      const examsActive = await ExamsService.getExamsActive({ where: { status: true } });
+      return res.status(201).json(examsActive);
+    } catch (e) {
+      return res.status(400).json({ error: e.message });
+    }
+    // return res.json(examsActive);
   },
 
   async updateExams(req, res) {
