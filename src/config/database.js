@@ -6,7 +6,7 @@ module.exports = {
   host: process.env.HOSTNAME,
   username: process.env.MYSQL_USER,
   password: process.env.MYSQL_PASSWORD,
-  database: 'laboratories_and_exams',
+  database: process.env.MYSQL_SCHEMA,
   define: {
     timestamp: true,
     underscored: true,
