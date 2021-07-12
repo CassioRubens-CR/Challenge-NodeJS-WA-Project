@@ -1,4 +1,5 @@
 require('dotenv').config()
+require('mysql2/promise');
 
 module.exports = {
   dialect: 'mysql',
