@@ -1,14 +1,13 @@
-# Desafio - Node | Wa
-
-Empreza: 
-# Wa Project
+# Desafio - Node | Empresa Wa Project
 - https://waproject.com.br/
+
 
 ## O objetivo do teste é:
 - Construir uma API para manutenção de laboratórios e exames.
 
+
 ## Contexto
-Estamos desenvolvendo uma aplicação para as seguintes situações:
+Desenvolver uma aplicação para as seguintes situações:
 - Laboratório:
   - Cadastrar um novo laboratório;
   - Obter uma lista de laboratórios ativos;
@@ -27,6 +26,7 @@ Estamos desenvolvendo uma aplicação para as seguintes situações:
   - Um exame pode estar associado a mais de um laboratório;
   - O cadastro de um laboratório/exame é considerado ativo e recebe um `id` gerado automaticamente.
 
+
 ### Informações
 - Laboratório
   - Nome
@@ -37,19 +37,23 @@ Estamos desenvolvendo uma aplicação para as seguintes situações:
   - Tipo [analise clinica, imagem]
   - Status [ativo, inativo]
 
+
 ## Funcionalidades extras
 - Possibilidade de executar cadastro, atualização e remoção em lote;
 - Endpoint que faz a busca por nome do exame e retorna todos os laboratórios associados a esse exame.
 
+
 ## Requisitos técnicos
-- Desenvolver usando *Node.js*
-- Serviço deve respeitar os princípios RESTFul
-- Criar um `README.md` (arquitetura, instruções de uso, entre outros)
+- Desenvolver usando *Node.js*.
+- Serviço deve respeitar os princípios RESTFul.
+- Criar um `README.md` (arquitetura, instruções de uso, entre outros).
+
 
 ## Diferenciais
-- Publicação do ambiente em um serviço cloud de hospedagens (Heroku, AWS, GCP, etc)
-- Configurar a aplicação para rodar em um container
-- Documentação da API
+- Publicação do ambiente em um serviço cloud de hospedagens (Heroku, AWS, GCP, etc).
+- Configurar a aplicação para rodar em um container.
+- Documentação da API.
+
 
 ## 🛠 Tecnologias
 As seguintes ferramentas foram usadas na construção do projeto:
@@ -69,8 +73,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 </h4>
 
 
-✅ Pré-requisitos e como rodar a aplicação/testes
-### Pré-requisitos
+### ✅ Pré-requisitos e como rodar a aplicação/testes.
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 - [Git](https://git-scm.com)
 - [Node.js](https://nodejs.org/en/)
@@ -79,27 +82,27 @@ Além disto é bom ter um editor para trabalhar com o código como:
 - [VSCode](https://code.visualstudio.com/)
 
 
-### 🎲 Rodando o Back End (servidor)
-# Clone este repositório
-$ git clone <------->
+## 🎲 Rodando o Back End (servidor)
+### Clone este repositório
+$ git clone https://github.com/CassioRubens-CR/Challenge-NodeJS-WA-Project.git
 
-# Acesse a pasta do projeto no terminal/cmd
+### Acesse a pasta do projeto no terminal/cmd
 $ cd ????????
 
-# Instale as dependências
+### Instale as dependências
 $ npm install
 
-# Crie/Altere o arquivo .env de acordo com as configurações do seu MySQL
+### Crie/Altere o arquivo `.env` de acordo com as configurações do seu MySQL
 
-# Execute a aplicação em modo de desenvolvimento
+### Execute a aplicação em modo de desenvolvimento
 $ npm run dev
 
-# O servidor inciará na porta:3000 - acesse <http://localhost:3000>
+### O servidor inciará na porta:3000 - acesse <http://localhost:3000>
 
 
 ✅ Breve síntese da aplicação
 
-### Rotas Laboratorio:
+### Rotas Laboratório:
 - Listar todos laboratório [get] </laboratories>
   * No body
 
@@ -168,12 +171,11 @@ $ npm run dev
   }
 
 
-✅ Demonstração da aplicação
-## Publicação do ambiente em um serviço cloud de hospedagens - acesse <>
+## ✅ Demonstração da aplicação
+### Publicação do ambiente em um serviço cloud de hospedagens - acesse <>
 
 
-✅ Autor
+## ✅ Autor
 ### Cássio Rubens 🚀
-<https://github.com/CassioRubens-CR
-<https://www.linkedin.com/in/cássio-rubens
-
+- https://github.com/CassioRubens-CR
+- https://www.linkedin.com/in/cássio-rubens
