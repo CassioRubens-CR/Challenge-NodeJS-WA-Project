@@ -2,9 +2,14 @@ const LaboratoryService = require('../services/LaboratoryService');
 
 module.exports = {
   async getByLaboratory(req, res) {
-    const laboratories = await LaboratoryService.getByLaboratory();
-
-    return res.json(laboratories);
+    // const laboratories = await LaboratoryService.getByLaboratory();
+    try {
+      const laboratories = await LaboratoryService.getByLaboratory();
+      return res.status(201).json(laboratories);
+    } catch (e) {
+      return res.status(400).json({ error: e.message });
+    }
+    // return res.json(laboratories);
   },
 
   async createLaboratory(req, res) {
@@ -19,9 +24,14 @@ module.exports = {
   },
 
   async getActive(req, res) {
-    const laboratoryActive = await LaboratoryService.getActive({ where: { status: true } });
-
-    return res.json(laboratoryActive);
+    // const laboratoryActive = await LaboratoryService.getActive({ where: { status: true } });
+    try {
+      const laboratoryActive = await LaboratoryService.getActive({ where: { status: true } });
+      return res.status(201).json(laboratoryActive);
+    } catch (e) {
+      return res.status(400).json({ error: e.message });
+    }
+    // return res.json(laboratoryActive);
   },
 
   async update(req, res) {
