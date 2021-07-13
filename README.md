@@ -1,7 +1,5 @@
-# Desafio - Node | Empresa Wa Project
+# Desafio - NodeJS | Empresa Wa Project
 - https://waproject.com.br
-
-<br>
 
 ___
 ## Sumário
@@ -14,10 +12,10 @@ ___
 7. [Diferenciais](#diferenciais)
 8. [Tecnologias](#🛠-tecnologias)
 9. [Pré-requisitos](#✅-pré-requisitos)
-10. [Rodando o Back End Localmente](#🎲-rodando-o-back-end-localmente)
+10. [Rodando o Back-End localmente](#🎲-rodando-o-back-end-localmente)
 11. [Breve síntese da aplicação](#✅-breve-síntese-da-aplicação)
 12. [Demonstração da aplicação](#✅-demonstração-da-aplicação)
-13. [Rodando o Back End em um serviço cloud de hospedagens](#🎲-rodando-o-back-end-em-um-serviço-cloud-de-hospedagens)
+13. [Rodando o Back-End em um serviço cloud de hospedagens](#🎲-rodando-o-back-end-em-um-serviço-cloud-de-hospedagens)
 14. [Autor](#cássio-rubens-🚀)
 ___
 
@@ -25,7 +23,9 @@ ___
 
 ## Objetivo do teste:
 - Construir uma API para manutenção de laboratórios e exames.
+___
 
+<br>
 
 ## Contexto
 Desenvolver uma aplicação para as seguintes situações:
@@ -74,6 +74,9 @@ Desenvolver uma aplicação para as seguintes situações:
 - Publicação do ambiente em um serviço cloud de hospedagens (Heroku, AWS, GCP, etc).
 - Configurar a aplicação para rodar em um container.
 - Documentação da API.
+___
+> ## Desafio Finalizado... 🚀🚀🚀
+___
 
 <br>
 
@@ -93,10 +96,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 <br>
 
-> ## Desafio Finalizado... 🚀🚀🚀
-
-<br>
-
 ### ✅ Pré-requisitos
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 - [Git](https://git-scm.com)
@@ -104,16 +103,20 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 
 Além disto é bom ter um editor para trabalhar com o código como:
 - [VSCode](https://code.visualstudio.com/)
+___
 
 <br>
 
 ## 🎲 Rodando o Back End Localmente
 ### Clone o repositório:
-> $ git clone https://github.com/CassioRubens-CR/Challenge-NodeJS-WA-Project.git
-
+```
+git clone https://github.com/CassioRubens-CR/Challenge-NodeJS-WA-Project.git
+```
 
 ### Acesse a pasta raiz do projeto e instale as dependências:
-> $ npm install
+```
+npm install
+```
 
 
 ### Crie/Altere o arquivo `.env` de acordo com as configurações do seu MySQL
@@ -125,19 +128,18 @@ HOSTNAME=LOCALHOST
 ```
 
 ### Execute a aplicação em modo de desenvolvimento
-> $ npm run dev
-
-
-### O servidor inciará na porta:3000 - <http://localhost:3000>
-
-<br> 
-<br>
-
-### ✅ Breve síntese da aplicação 
+```
+npm run dev
+```
+#### O servidor inciará na porta:3000 - <http://localhost:3000>
+___
 
 <br>
 
-### Rotas Laboratório:
+## ✅ Breve síntese da aplicação 
+
+
+### Rotas Laboratórios:
 > Listar todos laboratório `get` ***.../laboratories***
 ```json
   No body
@@ -231,9 +233,11 @@ HOSTNAME=LOCALHOST
   "name": "Nome do exame",
 }
 ```
+___
+
 <br>
 
-### ✅ Demonstração da aplicação
+## ✅ Demonstração da aplicação
 
 ### Publicação do ambiente em um serviço cloud de hospedagens
 
@@ -242,7 +246,7 @@ HOSTNAME=LOCALHOST
 - [Lista de Exames](https://pacific-retreat-64515.herokuapp.com/exams)
 - [Lista de Exames Ativos](https://pacific-retreat-64515.herokuapp.com/exams/active)
 - [Lista de Associação por Exame](https://pacific-retreat-64515.herokuapp.com/association/1/exam)
-
+___
 
 <br>
 
@@ -252,10 +256,13 @@ HOSTNAME=LOCALHOST
 > [Insomnia](https://insomnia.rest)
 
 Utilize a seguinte `URL`:
-> https://pacific-retreat-64515.herokuapp.com
+```
+https://pacific-retreat-64515.herokuapp.com
+```
 
 Complete a `URL` de acordo com as rotas descritas no campo:
 > [Breve síntese da aplicação](#✅-breve-síntese-da-aplicação)
+___
 
 <br>
 
