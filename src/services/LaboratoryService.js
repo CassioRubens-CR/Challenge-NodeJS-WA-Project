@@ -22,7 +22,6 @@ const createLaboratory = async ({ name, address, status }) => {
   return await Laboratories.create({ name, address, status });
 };
 
-
 const getActive = async () => {
   const laboratoryActive = await Laboratories.findAll({ where: { status: true } });
   return laboratoryActive;

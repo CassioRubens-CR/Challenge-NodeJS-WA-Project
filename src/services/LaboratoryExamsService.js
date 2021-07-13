@@ -44,21 +44,6 @@ const connect = async ({ laboratory_id, name, type, status }) => {
   return await laboratory.addExams(exam)
 };
 
-// const disconnect = async ({ laboratory_id, name }) => {
-
-//   const laboratory = await Laboratory.findByPk(laboratory_id, name);
-
-//   if (!laboratory) {
-//     return res.status(404).json({ error: 'laboratory not found' });
-//   }
-
-//   const exam = await Exams.findOne({
-//     where: { name }
-//   });
-
-//   return await laboratory.removeExams(exam)
-// };
-
 const disconnect = async ({ laboratory_id, exam_id }) => {
 
   const laboratory = await Laboratory.findByPk(laboratory_id);
@@ -68,9 +53,9 @@ const disconnect = async ({ laboratory_id, exam_id }) => {
   }
 
   const exam = await Exams.findByPk(exam_id);
-  
+
   await laboratory.removeExams(exam)
-  
+
   return exam;
 };
 

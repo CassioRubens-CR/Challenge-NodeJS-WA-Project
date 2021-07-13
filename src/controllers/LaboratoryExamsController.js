@@ -1,7 +1,4 @@
 const laboratoryExamesService = require('../services/LaboratoryExamsService');
-// const Exams = require('../models/Exams');
-// const Laboratory = require('../models/Laboratory');
-
 
 module.exports = {
   async getByIdLaboratory(req, res) {
@@ -39,7 +36,6 @@ module.exports = {
 
   async disconnect(req, res) {
     const { laboratory_id, exam_id } = req.params;
-    // const { name } = req.body;
 
     try {
       const laboratory = await laboratoryExamesService.disconnect({ laboratory_id, exam_id });
