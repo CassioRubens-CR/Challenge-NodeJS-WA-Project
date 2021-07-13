@@ -27,10 +27,10 @@ routes.patch('/exams/:id', ExamsController.logicalDeleteExam);
 
 routes.get('/association/:laboratory_id', LaboratoryExamsController.getByIdLaboratory);
 
-routes.get('/association/:exam_id/exam', LaboratoryExamsController.getExamByLaboratory);
+routes.get('/association', LaboratoryExamsController.getExamByLaboratory);
 
 routes.post('/association/:laboratory_id', LaboratoryExamsController.connect);
 
-routes.delete('/association/:laboratory_id', LaboratoryExamsController.disconnect);
+routes.delete('/association/:laboratory_id/:exam_id', LaboratoryExamsController.disconnect);
 
 module.exports = routes;

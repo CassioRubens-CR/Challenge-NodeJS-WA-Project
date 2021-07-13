@@ -1,63 +1,51 @@
-const Exams = require('../models/Exams');
-const Laboratory = require('../models/Laboratory');
+const laboratoryExamesService = require('../services/LaboratoryExamsService');
+// const Exams = require('../models/Exams');
+// const Laboratory = require('../models/Laboratory');
+
 
 module.exports = {
   async getByIdLaboratory(req, res) {
     const { laboratory_id } = req.params;
-
-    const laboratory = await Laboratory.findByPk(laboratory_id, {
-      include: { association: 'exams', through: { attributes: [] } }
-    });
-
-    return res.json(laboratory);
+    try {
+      const laboratory = await laboratoryExamesService.getByIdLaboratory({ laboratory_id });
+      return res.status(200).json(laboratory)
+    } catch (e) {
+      return res.status(400).json({ error: e.message });
+    }
   },
 
   async getExamByLaboratory(req, res) {
+    const { name } = req.body;
 
-    const { exam_id } = req.params;
-
-    const exam = await Exams.findByPk(exam_id, {
-      include: { association: 'laboratories', through: { attributes: [] } }
-    });
-
-    return res.json(exam);
+    try {
+      const examName = await laboratoryExamesService.getExamByLaboratory({ name });
+      return res.status(200).json(examName)
+    } catch (e) {
+      return res.status(400).json({ error: e.message });
+    }
   },
 
   async connect(req, res) {
     const { laboratory_id } = req.params;
     const { name, type, status } = req.body;
 
-    const laboratory = await Laboratory.findByPk(laboratory_id);
-
-    if (!laboratory) {
-      return res.status(404).json({ error: 'laboratory not found'});
+    try {
+      const laboratory = await laboratoryExamesService.connect({ laboratory_id, name, type, status });
+      return res.status(201).json(laboratory)
+    } catch (e) {
+      return res.status(400).json({ error: e.message });
     }
-
-    const [exam] = await Exams.findOrCreate({
-      where: { name, type, status }
-    });
-
-    await laboratory.addExams(exam)
-
-    return res.json(exam);
   },
 
   async disconnect(req, res) {
-    const { laboratory_id } = req.params;
-    const { name } = req.body;
+    const { laboratory_id, exam_id } = req.params;
+    // const { name } = req.body;
 
-    const laboratory = await Laboratory.findByPk(laboratory_id);
-
-    if (!laboratory) {
-      return res.status(404).json({ error: 'laboratory not found'});
+    try {
+      const laboratory = await laboratoryExamesService.disconnect({ laboratory_id, exam_id });
+      return res.status(200).json(laboratory)
+    } catch (e) {
+      return res.status(400).json({ error: e.message });
     }
-
-    const exam = await Exams.findOne({
-      where: { name }
-    });
-
-    await laboratory.removeExams(exam)
-
-    return res.json();
   },
 };

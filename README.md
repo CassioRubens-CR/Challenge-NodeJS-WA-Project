@@ -213,9 +213,11 @@ ___
   No body
 ```
 
-> Lista de associação por exame `get` ***.../association/:exam_id/exam***
+> Lista de associação por nome do exame `get` ***.../association***
 ```json
-  No body
+{
+  "name": "Nome do exame"
+}
 ```
 
 > Criar associação `post` ***.../association/:laboratory_id***
@@ -227,11 +229,9 @@ ___
 }
 ```
 
-> Desassociar `delete` ***.../association/:laboratory_id***
+> Desassociar `delete` ***.../association/:laboratory_id/:exam_id***
 ```json
-{
-  "name": "Nome do exame",
-}
+  No body
 ```
 ___
 
