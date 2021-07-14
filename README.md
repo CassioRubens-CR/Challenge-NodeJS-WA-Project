@@ -10,13 +10,13 @@ ___
 5. [Funcionalidades extras](#funcionalidades-extras)
 6. [Requisitos técnicos](#requisitos-técnicos)
 7. [Diferenciais](#diferenciais)
-8. [Tecnologias](#🛠-tecnologias)
-9. [Pré-requisitos](#✅-pré-requisitos)
-10. [Rodando o Back-End localmente](#🎲-rodando-o-back-end-localmente)
-11. [Breve síntese da aplicação](#✅-breve-síntese-da-aplicação)
-12. [Demonstração da aplicação](#✅-demonstração-da-aplicação)
-13. [Rodando o Back-End em um serviço cloud de hospedagens](#🎲-rodando-o-back-end-em-um-serviço-cloud-de-hospedagens)
-14. [Autor](#cássio-rubens-🚀)
+8. [Tecnologias](#tecnologias)
+9. [Pré-requisitos](#pré-requisitos)
+10. [Rodando o Back-End localmente](#clone-o-repositório)
+11. [Breve síntese da aplicação](#breve-síntese-da-aplicação)
+12. [Demonstração da aplicação](#demonstração-da-aplicação)
+13. [Rodando o Back-End em um serviço cloud de hospedagens](#antes-de-começar)
+14. [Autor](#autor)
 ___
 
 <br>
@@ -96,7 +96,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 <br>
 
-### ✅ Pré-requisitos
+### Pré-requisitos
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 - [Git](https://git-scm.com)
 - [Node.js](https://nodejs.org/en/)
@@ -136,7 +136,7 @@ ___
 
 <br>
 
-## ✅ Breve síntese da aplicação 
+## Breve síntese da aplicação 
 
 
 ### Rotas Laboratórios:
@@ -280,7 +280,7 @@ ___
 
 <br>
 
-## ✅ Demonstração da aplicação
+## Demonstração da aplicação
 
 ### Publicação do ambiente em um serviço cloud de hospedagens
 
@@ -294,7 +294,8 @@ ___
 
 ## 🎲 Rodando o Back End em um serviço cloud de hospedagens
 
-### Antes de começar, instale em sua máquina alguma ferramenta do tipo: 
+### Antes de começar:
+### instale em sua máquina alguma ferramenta do tipo: 
 > [Insomnia](https://insomnia.rest)
 
 Utilize a seguinte `URL`:
@@ -303,12 +304,12 @@ https://pacific-retreat-64515.herokuapp.com
 ```
 
 Complete a `URL` de acordo com as rotas descritas no campo:
-> [Breve síntese da aplicação](#✅-breve-síntese-da-aplicação)
+> [Breve síntese da aplicação](#breve-síntese-da-aplicação)
 ___
 
 <br>
 
-### ✅ Autor
+### Autor
 ### Cássio Rubens 🚀
 - https://github.com/CassioRubens-CR
 - https://www.linkedin.com/in/cássio-rubens
