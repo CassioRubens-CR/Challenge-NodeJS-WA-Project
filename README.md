@@ -288,7 +288,6 @@ ___
 - [Lista de Laboratórios Ativos](https://pacific-retreat-64515.herokuapp.com/laboratories/active)
 - [Lista de Exames](https://pacific-retreat-64515.herokuapp.com/exams)
 - [Lista de Exames Ativos](https://pacific-retreat-64515.herokuapp.com/exams/active)
-- [Lista de Associação por Exame](https://pacific-retreat-64515.herokuapp.com/association/1/exam)
 ___
 
 <br>
