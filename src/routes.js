@@ -9,6 +9,8 @@ routes.get('/laboratories', LaboratoryController.getByLaboratory);
 
 routes.post('/laboratories', LaboratoryController.createLaboratory);
 
+routes.post('/laboratories/batch', LaboratoryController.createLaboratoryBatch);
+
 routes.get('/laboratories/active', LaboratoryController.getActive);
 
 routes.put('/laboratories/:id', LaboratoryController.update);
@@ -18,6 +20,8 @@ routes.patch('/laboratories/:id', LaboratoryController.logicalDelete);
 routes.get('/exams', ExamsController.getByExams);
 
 routes.post('/exams', ExamsController.createExams);
+
+routes.post('/exams/batch', ExamsController.createExamsBatch);
 
 routes.get('/exams/active', ExamsController.getExamsActive);
 

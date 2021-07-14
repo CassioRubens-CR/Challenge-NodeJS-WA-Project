@@ -21,6 +21,18 @@ module.exports = {
     }
   },
 
+  async createLaboratoryBatch(req, res) {
+    const laboratories = req.body;
+
+    try {
+      const laboratory = await LaboratoryService.createLaboratoryBatch(laboratories);
+      return res.status(201).json(laboratory);
+    } catch (e) {
+      return res.status(400).json({ error: e.message });
+    }
+
+  },
+
   async getActive(req, res) {
     try {
       const laboratoryActive = await LaboratoryService.getActive({ where: { status: true } });

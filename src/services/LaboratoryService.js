@@ -16,10 +16,27 @@ const createLaboratory = async ({ name, address, status }) => {
 
   const savedLaboratory = await Laboratories.findOne({ where: { name } });
   if (savedLaboratory) {
-    throw new Error('there is a labortory with the same name');
+    throw new Error(`there is a laboratory with the same name: ${name}`);
   }
 
   return await Laboratories.create({ name, address, status });
+};
+
+const createLaboratoryBatch = async (laboratories) => {
+  const result = {
+    successes: [],
+    errors: []
+  };
+
+  for (const labortory of laboratories) {
+    try {
+      result.successes.push(await createLaboratory(labortory));
+    } catch (e) {
+      result.errors.push(e.message);
+    }
+  }
+
+  return result;
 };
 
 const getActive = async () => {
@@ -56,6 +73,7 @@ const logicalDelete = async (id) => {
 module.exports = {
   getByLaboratory,
   createLaboratory,
+  createLaboratoryBatch,
   getActive,
   update,
   logicalDelete

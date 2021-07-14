@@ -140,12 +140,12 @@ ___
 
 
 ### Rotas Laboratórios:
-> Listar todos laboratório `get` ***.../laboratories***
+> Listar todos laboratório `GET` ***.../laboratories***
 ```json
   No body
 ```
 
-> Cadastrar novo laboratório `post` ***.../laboratories***
+> Cadastrar laboratório `POST` ***.../laboratories***
 ```json
 {
   "name": "Nome do laboratório",
@@ -153,12 +153,34 @@ ___
   "status": true ou false,
 }
 ```
-> Listar todos laboratórios ativos `get` ***.../laboratories/active***
+
+> Cadastrar laboratório em lote `POST` ***.../laboratories/batch***
+```json
+[
+  {
+    "name": "Nome do laboratório",
+    "address": "Endereço",
+    "status": true ou false,
+  },
+  {
+    "name": "Nome do laboratório",
+    "address": "Endereço",
+    "status": true ou false,
+  },
+  {
+    "name": "Nome do laboratório",
+    "address": "Endereço",
+    "status": true ou false,
+  }
+]
+```
+
+> Listar todos laboratórios ativos `GET` ***.../laboratories/active***
 ```json
   No body
 ```
 
-> Atualizar laboratório existente `put` ***.../laboratories/:id***
+> Atualizar laboratório existente `PUT` ***.../laboratories/:id***
 ```json
 {
   "name": "Nome do laboratório",
@@ -166,19 +188,19 @@ ___
 }
 ```
 
-> Remover logicamente um laboratório ativo `patch` ***.../laboratories/:id***
+> Remover logicamente um laboratório ativo `PATCH` ***.../laboratories/:id***
 ```json
   No body
 ```
 <br>
 
 ### Rotas Exames:
-> Listar todos exames `get` ***.../exams***
+> Listar todos exames `GET` ***.../exams***
 ```json
   No body
 ```
 
-> Cadastrar novo exame `post` ***.../exams***
+> Cadastrar exame `POST` ***.../exams***
 ```json
 {
   "name": "Nome do exame",
@@ -187,12 +209,33 @@ ___
 }
 ```
 
-> Listar todos exames ativos `get` ***.../exams/active***
+> Cadastrar exame em lote `POST` ***.../exams/batch***
+```json
+[
+  {
+    "name": "Nome do exame",
+    "type": "analise clinica ou imagem",
+    "status": true ou false,
+  },
+  {
+    "name": "Nome do exame",
+    "type": "analise clinica ou imagem",
+    "status": true ou false,
+  },
+  {
+    "name": "Nome do exame",
+    "type": "analise clinica ou imagem",
+    "status": true ou false,
+  }
+]
+```
+
+> Listar todos exames ativos `GET` ***.../exams/active***
 ```json
   No body
 ```
 
-> Atualizar exame existente `put` ***.../exams/:id***
+> Atualizar exame existente `PUT` ***.../exams/:id***
 ```json
 {
   "name": "Nome do exame",
@@ -201,26 +244,26 @@ ___
 }
 ```
 
-> Remover logicamente um exame ativo `patch` ***.../exams/:id***
+> Remover logicamente um exame ativo `PATCH` ***.../exams/:id***
 ```json
   No body
 ```
 <br>
 
 ### Rotas Associação:
-> Lista de associação por laboratório `get` ***.../association/:laboratory_id***
+> Lista de associação por laboratório `GET` ***.../association/:laboratory_id***
 ```json
   No body
 ```
 
-> Lista de associação por nome do exame `get` ***.../association***
+> Lista de associação por nome do exame `GET` ***.../association***
 ```json
 {
   "name": "Nome do exame"
 }
 ```
 
-> Criar associação `post` ***.../association/:laboratory_id***
+> Criar associação `POST` ***.../association/:laboratory_id***
 ```json
 {
   "name": "Nome do exame",
@@ -229,7 +272,7 @@ ___
 }
 ```
 
-> Desassociar `delete` ***.../association/:laboratory_id/:exam_id***
+> Desassociar `DELETE` ***.../association/:laboratory_id/:exam_id***
 ```json
   No body
 ```

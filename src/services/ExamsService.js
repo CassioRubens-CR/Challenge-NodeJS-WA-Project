@@ -1,5 +1,10 @@
 const Exams = require('../models/Exams');
 
+const getByExams = async () => {
+  const exams = await Exams.findAll();
+  return exams;
+};
+
 const createExams = async ({ name, type, status }) => {
   if (!name) {
     throw new Error('name is required');
@@ -11,15 +16,28 @@ const createExams = async ({ name, type, status }) => {
 
   const savedExam = await Exams.findOne({ where: { name } });
   if (savedExam) {
-    throw new Error('there is a exam with the same name');
+    throw new Error(`there is a exam with the same ${name}`);
   }
 
   return await Exams.create({ name, type, status });
 };
 
-const getByExams = async () => {
-  const exams = await Exams.findAll();
-  return exams;
+const createExamsBatch = async (exams) => {
+  const result = {
+    successes: [],
+    errors: []
+  };
+
+  for (const exam of exams) {
+    console.log('exam for', exam);
+    try {
+      result.successes.push(await createExams(exam));
+    } catch (e) {
+      result.errors.push(e.message);
+    }
+  }
+
+  return result;
 };
 
 const getExamsActive = async () => {
@@ -54,8 +72,9 @@ const logicalDeleteExam = async (id) => {
 };
 
 module.exports = {
-  createExams,
   getByExams,
+  createExams,
+  createExamsBatch,
   getExamsActive,
   updateExams,
   logicalDeleteExam
